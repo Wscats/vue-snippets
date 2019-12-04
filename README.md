@@ -10,6 +10,8 @@ This extension adds Vue3 Code Snippets into Visual Studio Code.
 <a href="https://github.com/Wscats"><img src="https://img.shields.io/badge/Author-Eno Yao-blueviolet" alt="Eno Yao" /></a>
 <a href="https://github.com/Wscats"><img src="https://api.netlify.com/api/v1/badges/b652768b-1673-42cd-98dd-3fd807b2ebca/deploy-status" alt="Status" /></a>
 
+<img src="./public/1.gif" />
+
 # Snippets / 代码片段
 
 Including most of the API of Vue3. You can type `reactive`, choose `reactive`, and press ENTER, then `const data = reactive({...})` appear on the screen.
@@ -409,3 +411,7 @@ export default {
   },
 };
 ```
+
+# License
+
+[Vue3 Snippets](https://marketplace.visualstudio.com/items?itemName=Wscats.vue) is released under the [MIT](http://opensource.org/licenses/MIT).

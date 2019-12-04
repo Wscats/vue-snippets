@@ -9,7 +9,7 @@
 		"url": "https://github.com/Wscats"
 	},
 	"publisher": "Wscats",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"license": "MIT",
 	"engines": {
 		"vscode": "^1.40.0"
@@ -18,6 +18,8 @@
 		"vue",
 		"vue3",
 		"vue 3",
+		"vuejs",
+		"vue.js",
 		"composition api",
 		"composition",
 		"html",
@@ -32,7 +34,7 @@
 	},
 	"bugs": {
 		"url": "https://github.com/wscats/vue-snippets/issues",
-		"email": "kalone.cool@163.com"
+		"email": "kalone.cool@gmail.com"
 	},
 	"categories": [
 		"Other",
