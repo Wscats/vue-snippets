@@ -1,0 +1,151 @@
+{
+    "import": {
+        "prefix": "import",
+        "body": [
+            "import { $1 } from \"@vue/composition-api\""
+        ],
+        "description": "import"
+    },
+    "importVue": {
+        "prefix": "import",
+        "body": [
+            "import { $1 } from 'vue'"
+        ],
+        "description": "import"
+    },
+    "vue": {
+        "prefix": "newVue",
+        "body": [
+            "new Vue({",
+            "\t$1",
+            "})"
+        ],
+        "description": "new Vue()"
+    },
+    "createComponent": {
+        "prefix": "createComponent",
+        "body": [
+            "createComponent({",
+            "\t$1",
+            "})"
+        ],
+        "description": "createComponent()"
+    },
+    "export": {
+        "prefix": "export default",
+        "body": [
+            "export default { $1 }"
+        ],
+        "description": "export"
+    },
+    "setup": {
+        "prefix": "setup",
+        "body": [
+            "setup(${1:props}) { $2 }"
+        ],
+        "description": "setup"
+    },
+    "reactive": {
+        "prefix": "reactive",
+        "body": [
+            "const data = reactive({ $1 })"
+        ],
+        "description": "reactive"
+    },
+    "watch": {
+        "prefix": "watch",
+        "body": [
+            "watch($1, $2)"
+        ],
+        "description": "watch"
+    },
+    "watchFn": {
+        "prefix": "watch",
+        "body": [
+            "watch(() => {$1})"
+        ],
+        "description": "watchFn"
+    },
+    "computed": {
+        "prefix": "watch",
+        "body": [
+            "computed(() => {",
+            "\tget: () => {}",
+            "\tset: () => {}",
+            "})"
+        ],
+        "description": "computed"
+    },
+    "toRefs": {
+        "prefix": "toRefs",
+        "body": [
+            "toRefs($1)"
+        ],
+        "description": "toRefs"
+    },
+    "ref": {
+        "prefix": "ref",
+        "body": [
+            "ref($1)"
+        ],
+        "description": "ref"
+    },
+    "props": {
+        "prefix": "props",
+        "body": [
+            "props{",
+            "\t$1: $2",
+            "}"
+        ],
+        "description": "toRefs"
+    },
+    "onBeforeMount": {
+        "prefix": "onBeforeMount",
+        "body": [
+            "onBeforeMount(() => { $1 })"
+        ],
+        "description": "onBeforeMount"
+    },
+    "onMounted": {
+        "prefix": "onMounted",
+        "body": [
+            "onMounted(() => { $1 })"
+        ],
+        "description": "onMounted"
+    },
+    "onBeforeUpdate": {
+        "prefix": "onBeforeUpdate",
+        "body": [
+            "onBeforeUpdate(() => { $1 })"
+        ],
+        "description": "onBeforeUpdate"
+    },
+    "onUpdated": {
+        "prefix": "onUpdated",
+        "body": [
+            "onUpdated(() => { $1 })"
+        ],
+        "description": "onUpdated"
+    },
+    "onBeforeUnmount": {
+        "prefix": "onBeforeUnmount",
+        "body": [
+            "onBeforeUnmount(() => { $1 })"
+        ],
+        "description": "onBeforeUnmount"
+    },
+    "onUnmounted": {
+        "prefix": "onUnmounted",
+        "body": [
+            "onUnmounted(() => { $1 })"
+        ],
+        "description": "onUnmounted"
+    },
+    "onErrorCaptured": {
+        "prefix": "onErrorCaptured",
+        "body": [
+            "onErrorCaptured(() => { $1 })"
+        ],
+        "description": "onErrorCaptured"
+    }
+}

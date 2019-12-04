@@ -1,0 +1,38 @@
+{
+    "template": {
+        "prefix": "template",
+        "body": [
+            "<template>",
+            "\t<${1:div}$2>",
+            "\t\t$0",
+            "\t</${1:div}>",
+            "</template>"
+        ],
+        "description": "template"
+    },
+    "mustache": {
+        "prefix": "{{}}",
+        "body": [
+            "{{$1}}"
+        ],
+        "description": "mustache"
+    },
+    "style": {
+        "prefix": "style",
+        "body": [
+            "<style>",
+            "\t$1",
+            "</style>"
+        ],
+        "description": "style"
+    },
+    "script": {
+        "prefix": "script",
+        "body": [
+            "<script>",
+            "\t$1",
+            "</script>"
+        ],
+        "description": "script"
+    }
+}

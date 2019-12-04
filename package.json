@@ -1,0 +1,81 @@
+{
+	"name": "vue",
+	"displayName": "Vue 3 Snippets",
+	"description": "This extension adds Vue 3 Code Snippets into Visual Studio Code.",
+	"icon": "public/logo.png",
+	"author": {
+		"name": "Eno Yao",
+		"email": "kalone.cool@gmail.com",
+		"url": "https://github.com/Wscats"
+	},
+	"publisher": "Wscats",
+	"version": "0.0.1",
+	"license": "MIT",
+	"engines": {
+		"vscode": "^1.40.0"
+	},
+	"keywords": [
+		"vue",
+		"vue3",
+		"vue 3",
+		"composition api",
+		"composition",
+		"html",
+		"javascript",
+		"snippet",
+		"api"
+	],
+	"homepage": "https://github.com/wscats/vue-snippets#readme",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/wscats/vue-snippets"
+	},
+	"bugs": {
+		"url": "https://github.com/wscats/vue-snippets/issues",
+		"email": "kalone.cool@163.com"
+	},
+	"categories": [
+		"Other",
+		"Programming Languages",
+		"Snippets",
+		"Formatters"
+	],
+	"contributes": {
+		"snippets": [
+			{
+				"language": "javascript",
+				"path": "./snippets/javascript.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/javascript.json"
+			},
+			{
+				"language": "html",
+				"path": "./snippets/javascript.json"
+			},
+			{
+				"language": "html",
+				"path": "./snippets/html.json"
+			},
+			{
+				"language": "vue",
+				"path": "./snippets/javascript.json"
+			},
+			{
+				"language": "vue",
+				"path": "./snippets/html.json"
+			}
+		]
+	},
+	"scripts": {
+		"build": "vsce package"
+	},
+	"devDependencies": {
+		"typescript": "^3.3.1",
+		"vscode": "^1.1.28",
+		"tslint": "^5.12.1",
+		"@types/node": "^10.12.21",
+		"@types/mocha": "^2.2.42"
+	}
+}
