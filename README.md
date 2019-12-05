@@ -1,6 +1,6 @@
 # Vue3 Snippets for Visual Studio Code
 
-This extension adds Vue3 Code Snippets into Visual Studio Code.
+[Vue3 Snippets](https://marketplace.visualstudio.com/items?itemName=Wscats.vue), This extension adds Vue3 Code Snippets into Visual Studio Code.
 
 这个插件基于最新的 Vue3 的 API 添加了 Code Snippets。
 
