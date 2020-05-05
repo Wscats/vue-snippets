@@ -13,14 +13,14 @@
         ],
         "description": "import"
     },
-    "createComponent": {
-        "prefix": "createComponent",
+    "defineComponent": {
+        "prefix": "defineComponent",
         "body": [
-            "createComponent({",
+            "defineComponent({",
             "\t$1",
             "})"
         ],
-        "description": "createComponent()"
+        "description": "defineComponent()"
     },
     "export": {
         "prefix": "export default",
