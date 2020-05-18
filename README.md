@@ -23,7 +23,7 @@ Including most of the API of Vue3. You can type `reactive`, choose `reactive`, a
 | `import` | `import {...} from "@vue/composition-api"` |
 | `import` | `import {...} from 'vue'` |
 | `newVue` | `newVue({...})` |
-| `createComponent` | `createComponent({...})` |
+| `defineComponent` | `defineComponent({...})` |
 | `export` | `export default { ... }` |
 | `setup` | `setup(${...}) {...}` |
 | `reactive` | `const data = reactive({...})` |
@@ -108,16 +108,16 @@ After installing the plugin you can use the Composition API to compose your comp
 
 **This plugin requires TypeScript version >3.5.1. If you are using `vetur`, make sure to set `vetur.useWorkspaceDependencies` to `true`.**
 
-To let TypeScript properly infer types inside Vue component options, you need to define components with `createComponent`:
+To let TypeScript properly infer types inside Vue component options, you need to define components with `defineComponent`:
 
 **请使用最新版的 TypeScript，如果你使用了 `vetur`，请将 `vetur.useWorkspaceDependencies` 设为 `true`。**
 
-为了让 TypeScript 正确的推导类型，我们必须使用 `createComponent` 来定义组件:
+为了让 TypeScript 正确的推导类型，我们必须使用 `defineComponent` 来定义组件:
 
 ```ts
-import { createComponent } from '@vue/composition-api';
+import { defineComponent } from '@vue/composition-api';
 
-const Component = createComponent({
+const Component = defineComponent({
   // 启用类型推断
 });
 
