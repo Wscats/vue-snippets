@@ -23,12 +23,11 @@ function activate(context) {
         if (activeTextEditor && activeTextEditor.document.languageId === 'vue') {
             format.init();
         } else {
-            vscode.window.showInformationMessage('It‘s not a .vue file');
+            // vscode.window.showInformationMessage('It‘s not a .vue file');
         }
     });
     statusBarUi.StatusBarUi.init(vscode.workspace.getConfiguration("vue3snippets").get("enable-compile-vue-file-on-did-save-code"));
 }
 exports.activate = activate;
-function deactivate() {
-}
+function deactivate() { };
 exports.deactivate = deactivate;
