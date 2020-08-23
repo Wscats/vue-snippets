@@ -7,10 +7,10 @@ class StatusBarUi {
         }
         return StatusBarUi._statusBarItem;
     }
-    static init(disableCompileFilesOnDidSaveCode) {
+    static init(enableCompileFilesOnDidSaveCode) {
         StatusBarUi.working("Starting...");
         setTimeout(function () {
-            disableCompileFilesOnDidSaveCode ? StatusBarUi.notWatching() : StatusBarUi.watching();
+            enableCompileFilesOnDidSaveCode ? StatusBarUi.watching() : StatusBarUi.notWatching();
         }, 1000);
     }
     static watching() {

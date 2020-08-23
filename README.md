@@ -1,14 +1,20 @@
 # Vue3 Snippets Highlight Formatters For Visual Studio Code
 
-[Vue3 Snippets](https://marketplace.visualstudio.com/items?itemName=Wscats.vue), This extension adds Vue3 Code Snippets into Visual Studio Code.
+Vue3 Snippets, Contains code highlighting, code snippets and formatting commonly used in vue2 and vue3.
 
 <a href="https://marketplace.visualstudio.com/items?itemName=Wscats.vue"><img src="https://img.shields.io/badge/Download-10k+-orange" alt="Download" /></a>
-<a href="https://marketplace.visualstudio.com/items?itemName=Wscats.vue"><img src="https://img.shields.io/badge/Macketplace-v0.1-brightgreen" alt="Macketplace" /></a>
+<a href="https://marketplace.visualstudio.com/items?itemName=Wscats.vue"><img src="https://img.shields.io/badge/Macketplace-v1.x-brightgreen" alt="Macketplace" /></a>
 <a href="https://github.com/Wscats/vue-snippets"><img src="https://img.shields.io/badge/Github Page-Wscats-yellow" alt="Github Page" /></a>
 <a href="https://github.com/Wscats"><img src="https://img.shields.io/badge/Author-Eno Yao-blueviolet" alt="Eno Yao" /></a>
 <!-- <a href="https://github.com/Wscats"><img src="https://api.netlify.com/api/v1/badges/b652768b-1673-42cd-98dd-3fd807b2ebca/deploy-status" alt="Status" /></a> -->
 
-<img src="./public/1.gif" />
+<!-- <img src="./public/1.gif" /> -->
+![Demo](public/1.gif)
+
+You can turn on the statusbar `Auto Format Vue` switch at the bottom of vscode, which allows you to automatically format the `vue` file when you write it.
+
+<!-- <img src="./public/2.gif" /> -->
+![Demo](public/2.gif)
 
 # Snippets
 
@@ -43,7 +49,7 @@ Including most of the API of Vue3. You can type `reactive`, choose `reactive`, a
 
 All code snippets of Vue 2 Snippets are also included here.
 
-<b><details><summary>Vue 2 Snippets</summary></b>
+<!-- <b><details><summary>Vue 2 Snippets</summary></b> -->
 
 | Prefix                           | JavaScript Snippet Content                                         |
 | -------------------------------- | ------------------------------------------------------------------ |
@@ -193,14 +199,15 @@ All code snippets of Vue 2 Snippets are also included here.
 | `nuxtChild` | `<nuxt-child/>`         |
 | `nuxtLink`  | `<nuxt-link to=""/>`    |
 | `asyncData` | `asyncData() {}`        |
-</details>
+
+<!-- </details> -->
 
 
 # Extension Settings
 
-- Use [js-beautify](https://github.com/beautify-web/js-beautify)'s config 
-- Use [pug-beautify](https://github.com/vingorius/pug-beautify)'s config
-- Indent Size: default use the "editor.tabSize"
+- Use [js-beautify](https://github.com/beautify-web/js-beautify)'s config. 
+- Use [pug-beautify](https://github.com/vingorius/pug-beautify)'s config.
+- Indent Size: default use the `editor.tabSize`.
 
 ```json
 {
@@ -237,11 +244,21 @@ All code snippets of Vue 2 Snippets are also included here.
 | vue3snippets.js-beautify      | (See the config at front) | (See the config at front) |
 | vue3snippets.pug-beautify     | {fill_tab: false}         | {fill_tab: false}         |
 
+# Thanks
+
+| [<img src="https://avatars1.githubusercontent.com/u/17243165?s=460&v=4" width="60px;"/><br /><sub>Eno Yao</sub>](https://github.com/Wscats) | [<img src="https://avatars2.githubusercontent.com/u/5805270?s=460&v=4" width="60px;"/><br /><sub>Aaron Xie</sub>](https://github.com/aaron-xie) | [<img src="https://avatars3.githubusercontent.com/u/12515367?s=460&v=4" width="60px;"/><br /><sub>DK Lan</sub>](https://github.com/dk-lan) | [<img src="https://avatars1.githubusercontent.com/u/30917929?s=460&v=4" width="60px;"/><br /><sub>Yong</sub>](https://github.com/flowerField) | [<img src="https://avatars3.githubusercontent.com/u/33544236?s=460&v=4" width="60px;"/><br /><sub>Li Ting</sub>](https://github.com/Liting1) | <img src="https://avatars2.githubusercontent.com/u/50255537?s=400&u=cfd51a5f46862d14e92e032a5b7ec073b67a904b&v=4" width="60px;"/><br /><sub>Xin</sub> | [<img src="https://avatars0.githubusercontent.com/u/39754159?s=400&v=4" width="60px;"/><br /><sub>Lemon</sub>](https://github.com/lemonyyye) | [<img src="https://avatars3.githubusercontent.com/u/31915459?s=400&u=11ea9bc9baa62784208a29dddcd0a77789e9620f&v=4" width="60px;"/><br /><sub>Jing</sub>](https://github.com/vickySC) | [<img src="https://avatars2.githubusercontent.com/u/24653988?s=400&u=76227871dea8d4b57162093fde63b7d52910145d&v=4" width="60px;"/><br /><sub>Lin</sub>](https://github.com/shirley3790) | [<img src="https://avatars2.githubusercontent.com/u/23230108?s=460&v=4" width="60px;"/><br /><sub>Tian Fly</sub>](https://github.com/tiantengfly) |
+| - | - | - | - | - | - | - | - | - | - |
+
+If you enjoy front end, you should have it! xie, yao, yong, ting, jing, lin, tian, xin, xia, dk and lemon ~ Waiting for you in our heart！
+
+If you think it's useful, you can leave us a [message and like it](https://marketplace.visualstudio.com/items?itemName=Wscats.vue&ssr=false#review-details), Your support is our driving force😀
+
 
 # Requirements
 
 - [Js Beautify](https://github.com/beautify-web/js-beautify)
 - [Pug Beautify](https://github.com/vingorius/pug-beautify)
+- [Vue Format](https://github.com/win7killer/vue-format)
 - [Vue2 Snippets](https://github.com/sdras/vue-vscode-snippets)
 - [Vue Syntax Highlight](https://github.com/vuejs/vue-syntax-highlight)
 

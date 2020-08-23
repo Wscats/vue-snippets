@@ -15,7 +15,7 @@ function activate(context) {
     });
     context.subscriptions.push(compileOn);
     context.subscriptions.push(compileOff);
-    vscode.workspace.onDidSaveTextDocument(() => {
+    vscode.workspace.onWillSaveTextDocument(() => {
         let config = vscode.workspace.getConfiguration("vue3snippets");
         let isEnableOnDidSaveTextDocument = config.get("enable-compile-vue-file-on-did-save-code");
         if (!isEnableOnDidSaveTextDocument) { return };

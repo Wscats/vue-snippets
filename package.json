@@ -9,7 +9,7 @@
 		"url": "https://github.com/Wscats"
 	},
 	"publisher": "Wscats",
-	"version": "0.0.3",
+	"version": "1.0.6",
 	"license": "MIT",
 	"engines": {
 		"vscode": "^1.40.0"
@@ -60,7 +60,7 @@
 			"properties": {
 				"vue3snippets.enable-compile-vue-file-on-did-save-code": {
 					"type": "boolean",
-					"default": false,
+					"default": true,
 					"description": "Enable compile vue file on did save code."
 				},
 				"vue3snippets.html_indent_root": {
@@ -123,8 +123,7 @@
 				],
 				"extensions": [
 					".vue"
-				],
-				"configuration": "./syntaxes/vue.configuration.json"
+				]
 			}
 		],
 		"grammars": [

@@ -37,6 +37,7 @@ let methods = {
         this.newText = '';
         // 分别处理 html(pug)、css、js
         this.splitContent(this.text);
+        console.log(this.text);
         // 内容回写到文件
         this.writeFile();
     },
