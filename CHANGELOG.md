@@ -5,9 +5,11 @@ All notable changes to the `Vue` extension will be documented in this file.
 - 2019.11.28 Update html sinppets
 - 2019.11.29 Update javascript sinppets
 - 2019.11.30 Delete useless configuration
-- 2019.12.1 Change the extension logo
-- 2019.12.2 Update html and javascript sinppets
-- 2019.12.3 Add vue snippets
+- 2019.12.01 Change the extension logo
+- 2019.12.02 Update html and javascript sinppets
+- 2019.12.03 Add vue snippets
+- 2020.08.22 Add syntax highlight
+- 2020.08.23 Support formatting
 
 # Unreleased
 

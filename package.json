@@ -1,7 +1,7 @@
 {
 	"name": "vue",
-	"displayName": "Vue 3 Snippets",
-	"description": "This extension adds Vue 3 and Vue 2 Code Snippets into Visual Studio Code.",
+	"displayName": "Vue 3 Snippets Highlight Formatters",
+	"description": "Vue 2 && 3 Code Snippets, Syntax Highlight And Code Formatters Into Visual Studio Code.",
 	"icon": "public/logo.png",
 	"author": {
 		"name": "Eno Yao",
@@ -14,6 +14,16 @@
 	"engines": {
 		"vscode": "^1.40.0"
 	},
+	"galleryBanner": {
+		"color": "#58bc58",
+		"theme": "dark"
+	},
+	"activationEvents": [
+		"*",
+		"onCommand:vue3snippets.compileOn",
+		"onCommand:vue3snippets.compileOff"
+	],
+	"main": "./extension.js",
 	"keywords": [
 		"vue",
 		"vue2",
@@ -45,6 +55,65 @@
 		"Formatters"
 	],
 	"contributes": {
+		"configuration": {
+			"title": "Auto Format Vue",
+			"properties": {
+				"vue3snippets.enable-compile-vue-file-on-did-save-code": {
+					"type": "boolean",
+					"default": false,
+					"description": "Enable compile vue file on did save code."
+				},
+				"vue3snippets.html_indent_root": {
+					"type": "boolean",
+					"default": false,
+					"description": "If indent the root-tag in .vue's template."
+				},
+				"vue3snippets.format_need": {
+					"type": "array",
+					"default": [
+						"html",
+						"js",
+						"css"
+					],
+					"description": "List of format, default [\"html\", \"js\", \"css\"]."
+				},
+				"vue3snippets.break_attr_limit": {
+					"type": "number",
+					"default": -1,
+					"description": "Break attributes when tag's attributes.length > this number, no break when -1."
+				},
+				"vue3snippets.attr_end_with_gt": {
+					"type": "boolean",
+					"default": true,
+					"description": "If end attrs width '>' when break_attr_limit."
+				},
+				"vue3snippets.js-beautify": {
+					"type": "object",
+					"default": {
+						"indent_size": "editor.tabSize",
+						"indent_char": " ",
+						"indent_with_tabs": false,
+						"brace-style": "collapse",
+						"space_after_anon_function": true,
+						"css": {},
+						"js": {},
+						"html": {
+							"force_format": [
+								"template"
+							]
+						}
+					},
+					"description": "The config use some js-beautify options, see js-beautify."
+				},
+				"vue3snippets.pug-beautify": {
+					"type": "object",
+					"default": {
+						"fill_tab": false
+					},
+					"description": "The config use some pug-beautify options, see pug-beautify."
+				}
+			}
+		},
 		"languages": [
 			{
 				"id": "vue",
@@ -80,10 +149,6 @@
 			},
 			{
 				"language": "html",
-				"path": "./snippets/html.json"
-			},
-			{
-				"language": "html",
 				"path": "./snippets/vue.json"
 			},
 			{
@@ -97,10 +162,18 @@
 			{
 				"language": "vue",
 				"path": "./snippets/html.json"
+			},
+			{
+				"language": "jade",
+				"path": "./snippets/pug.json"
 			}
 		]
 	},
 	"scripts": {
 		"build": "vsce package"
+	},
+	"dependencies": {
+		"js-beautify": "^1.13.0",
+		"pug-beautify": "^0.1.1"
 	}
 }

@@ -841,9 +841,9 @@
         "description": "just a word"
     },
     "bundleRenderer.renderToString": {
-        "prefix": "bundleRenderer.renderToString",
+        "prefix": "bundleRendererRenderToString",
         "body": [
-            "bundleRenderer.renderToString"
+            "bundleRendererRenderToString"
         ],
         "description": "just a word"
     },
@@ -878,6 +878,13 @@
             "})$0"
         ],
         "description": "const router = newVueRouter({ })"
+    },
+    "importVueRouter": {
+        "prefix": "importVueRouter",
+        "body": [
+            "import VueRouter from 'vue-router'"
+        ],
+        "description": "import VueRouter from 'vue-router'"
     },
     "routerBeforeEach": {
         "prefix": "routerBeforeEach",
