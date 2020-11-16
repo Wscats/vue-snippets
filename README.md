@@ -13,6 +13,8 @@ Vue3 Snippets, Contains code highlighting, code snippets and formatting commonly
 
 You can turn on the statusbar `Auto Format Vue` switch at the bottom of vscode, which allows you to automatically format the `vue` file when you write it.
 
+Or right-click to display the drop-down menu panel, click the `Vue Format` menu item to format.
+
 <!-- <img src="./public/2.gif" /> -->
 ![Demo](public/2.gif)
 

@@ -9,7 +9,7 @@
 		"url": "https://github.com/Wscats"
 	},
 	"publisher": "Wscats",
-	"version": "1.0.9",
+	"version": "1.0.10",
 	"license": "MIT",
 	"engines": {
 		"vscode": "^1.40.0"
@@ -21,7 +21,8 @@
 	"activationEvents": [
 		"*",
 		"onCommand:vue3snippets.compileOn",
-		"onCommand:vue3snippets.compileOff"
+		"onCommand:vue3snippets.compileOff",
+		"onCommand:vue3snippets.format"
 	],
 	"main": "./extension.js",
 	"keywords": [
@@ -55,6 +56,13 @@
 		"Formatters"
 	],
 	"contributes": {
+		"commands": [
+			{
+				"when": "editorLangId == vue",
+				"command": "vue3snippets.format",
+				"title": "Vue Format"
+			}
+		],
 		"configuration": {
 			"title": "Auto Format Vue",
 			"properties": {
@@ -62,55 +70,6 @@
 					"type": "boolean",
 					"default": false,
 					"description": "Enable compile vue file on did save code."
-				},
-				"vue3snippets.html_indent_root": {
-					"type": "boolean",
-					"default": false,
-					"description": "If indent the root-tag in .vue's template."
-				},
-				"vue3snippets.format_need": {
-					"type": "array",
-					"default": [
-						"html",
-						"js",
-						"css"
-					],
-					"description": "List of format, default [\"html\", \"js\", \"css\"]."
-				},
-				"vue3snippets.break_attr_limit": {
-					"type": "number",
-					"default": -1,
-					"description": "Break attributes when tag's attributes.length > this number, no break when -1."
-				},
-				"vue3snippets.attr_end_with_gt": {
-					"type": "boolean",
-					"default": true,
-					"description": "If end attrs width '>' when break_attr_limit."
-				},
-				"vue3snippets.js-beautify": {
-					"type": "object",
-					"default": {
-						"indent_size": "editor.tabSize",
-						"indent_char": " ",
-						"indent_with_tabs": false,
-						"brace-style": "collapse",
-						"space_after_anon_function": true,
-						"css": {},
-						"js": {},
-						"html": {
-							"force_format": [
-								"template"
-							]
-						}
-					},
-					"description": "The config use some js-beautify options, see js-beautify."
-				},
-				"vue3snippets.pug-beautify": {
-					"type": "object",
-					"default": {
-						"fill_tab": false
-					},
-					"description": "The config use some pug-beautify options, see pug-beautify."
 				}
 			}
 		},
@@ -131,6 +90,23 @@
 				"language": "vue",
 				"scopeName": "text.html.vue",
 				"path": "./syntaxes/vue.tmLanguage"
+			}
+		],
+		"menus": {
+			"editor/context": [
+				{
+					"when": "editorLangId == vue",
+					"command": "vue3snippets.format",
+					"group": "navigation"
+				}
+			]
+		},
+		"keybindings": [
+			{
+				"key": "ctrl+shift+f",
+				"mac": "cmd+shift+f",
+				"when": "editorTextFocus && !editorReadonly && editorLangId == vue",
+				"command": "vue3snippets.format"
 			}
 		],
 		"snippets": [
