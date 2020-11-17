@@ -2,20 +2,23 @@
 
 Vue3 Snippets, Contains code highlighting, code snippets and formatting commonly used in vue2 and vue3.
 
-<a href="https://marketplace.visualstudio.com/items?itemName=Wscats.vue"><img src="https://img.shields.io/badge/Download-10k+-orange" alt="Download" /></a>
+<a href="https://marketplace.visualstudio.com/items?itemName=Wscats.vue"><img src="https://img.shields.io/badge/Download-60k+-orange" alt="Download" /></a>
 <a href="https://marketplace.visualstudio.com/items?itemName=Wscats.vue"><img src="https://img.shields.io/badge/Macketplace-v1.x-brightgreen" alt="Macketplace" /></a>
 <a href="https://github.com/Wscats/vue-snippets"><img src="https://img.shields.io/badge/Github Page-Wscats-yellow" alt="Github Page" /></a>
 <a href="https://github.com/Wscats"><img src="https://img.shields.io/badge/Author-Eno Yao-blueviolet" alt="Eno Yao" /></a>
+
 <!-- <a href="https://github.com/Wscats"><img src="https://api.netlify.com/api/v1/badges/b652768b-1673-42cd-98dd-3fd807b2ebca/deploy-status" alt="Status" /></a> -->
 
 <!-- <img src="./public/1.gif" /> -->
+
 ![Demo](public/1.gif)
 
-You can turn on the statusbar `Auto Format Vue` switch at the bottom of vscode, which allows you to automatically format the `vue` file when you write it.
+You can turn on the statusbar `Auto Format Vue` switch at the bottom of vscode, which allows you to automatically format the vue file when you write it.
 
 Or right-click to display the drop-down menu panel, click the `Format Document` menu item to format.
 
 <!-- <img src="./public/2.gif" /> -->
+
 ![Demo](public/2.gif)
 
 # Snippets
@@ -204,47 +207,49 @@ All code snippets of Vue 2 Snippets are also included here.
 
 <!-- </details> -->
 
-
 # Extension Settings
 
-- Use [js-beautify](https://github.com/beautify-web/js-beautify)'s config. 
-- Use [pug-beautify](https://github.com/vingorius/pug-beautify)'s config.
-- Indent Size: default use the `editor.tabSize`.
+Use [Prettier](https://github.com/prettier/prettier)'s config.
 
 ```json
-{
-    "html_indent_root": false, // If need to indent the root tag of template in ".vue" file
-    "break_attr_limit": -1, // when attributes.length > the value，break attributes force; keep inline when -1.
-    "attr_end_with_gt": true, // when "break_attr_limit" works, if don't use "\n" before tag's ">"，default "true"
-    "format_need": ["html", "js", "css"], // the list of need to format, default ["html", "js", "css"]. delete anyone if you don't need format.
-    "js-beautify": {
-        "indent_size": "editor.tabSize",
-        "indent_char": " ",
-        "indent_with_tabs": false,
-        "brace-style": "collapse",
-        "space_after_anon_function": true,
-        "css": {},
-        "js": {},
-        "html": {
-            // "force_format": ["template"],
-            "wrap_attributes": "auto"
-        }
-    },
-    "pug-beautify": {
-        "fill_tab": false
-    }
-}
-
+vue3snippets.arrowParens
+vue3snippets.bracketSpacing
+vue3snippets.endOfLine
+vue3snippets.htmlWhitespaceSensitivity
+vue3snippets.insertPragma
+vue3snippets.jsxBracketSameLine
+vue3snippets.jsxSingleQuote
+vue3snippets.printWidth
+vue3snippets.proseWrap
+vue3snippets.quoteProps
+vue3snippets.requirePragma
+vue3snippets.semi
+vue3snippets.singleQuote
+vue3snippets.tabWidth
+vue3snippets.trailingComma
+vue3snippets.useTabs
+vue3snippets.vueIndentScriptAndStyle
 ```
 
-| Key                           | Example                   | Default                   |
-| ----------------------------- | ------------------------- | ------------------------- |
-| vue3snippets.html_indent_root | false                     | false                     |
-| vue3snippets.break_attr_limit | 2                         | -1                        |
-| vue3snippets.attr_end_with_gt | true                      | true                      |
-| vue3snippets.format_need      | ["html"]                  | ["html", "js", "css"]     |
-| vue3snippets.js-beautify      | (See the config at front) | (See the config at front) |
-| vue3snippets.pug-beautify     | {fill_tab: false}         | {fill_tab: false}         |
+| Key                                    | Example                       | Default   |
+| -------------------------------------- | ----------------------------- | --------- |
+| vue3snippets.printWidth                | 10/20/30/40/n                 | 80        |
+| vue3snippets.tabWidth                  | 1/2/3/4/n                     | 2         |
+| vue3snippets.singleQuote               | false/true                    | false     |
+| vue3snippets.trailingComma             | none/es5/all                  | es5       |
+| vue3snippets.bracketSpacing            | true                          | true      |
+| vue3snippets.jsxBracketSameLine        | false/true                    | false     |
+| vue3snippets.semi                      | false/true                    | true      |
+| vue3snippets.requirePragma             | false/true                    | false     |
+| vue3snippets.insertPragma              | false/true                    | false     |
+| vue3snippets.useTabs                   | false/true                    | false     |
+| vue3snippets.proseWrap                 | preserve/always/never         | preserve  |
+| vue3snippets.arrowParens               | avoid/always                  | always    |
+| vue3snippets.jsxSingleQuote            | false/true                    | false     |
+| vue3snippets.htmlWhitespaceSensitivity | css/strict/ignore             | css       |
+| vue3snippets.vueIndentScriptAndStyle   | false/true                    | false     |
+| vue3snippets.endOfLine                 | auto/lf/crlf/cr               | lf        |
+| vue3snippets.quoteProps                | as-needed/consistent/preserve | as-needed |
 
 # Thanks
 
@@ -254,7 +259,6 @@ All code snippets of Vue 2 Snippets are also included here.
 If you enjoy front end, you should have it! xie, yao, yong, ting, jing, lin, tian, xin, xia, dk and lemon ~ Waiting for you in our heart！
 
 If you think it's useful, you can leave us a [message and like it](https://marketplace.visualstudio.com/items?itemName=Wscats.vue&ssr=false#review-details), Your support is our driving force😀
-
 
 # Requirements
 
