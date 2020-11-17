@@ -9,7 +9,7 @@
 		"url": "https://github.com/Wscats"
 	},
 	"publisher": "Wscats",
-	"version": "1.0.10",
+	"version": "1.0.11",
 	"license": "MIT",
 	"engines": {
 		"vscode": "^1.40.0"
@@ -39,7 +39,8 @@
 		"javascript",
 		"snippet",
 		"api",
-		"cnode"
+		"cnode",
+		"format"
 	],
 	"homepage": "https://github.com/wscats/vue-snippets#readme",
 	"repository": {
@@ -70,6 +71,138 @@
 					"type": "boolean",
 					"default": false,
 					"description": "Enable compile vue file on did save code."
+				},
+				"vue3snippets.printWidth": {
+					"type": "integer",
+					"default": 80,
+					"markdownDescription": "Fit code within this line limit.",
+					"scope": "resource"
+				},
+				"vue3snippets.tabWidth": {
+					"type": "integer",
+					"default": 2,
+					"markdownDescription": "Number of spaces it should use per tab.",
+					"scope": "resource"
+				},
+				"vue3snippets.singleQuote": {
+					"type": "boolean",
+					"default": false,
+					"markdownDescription": "If true, will use single instead of double quotes.",
+					"scope": "resource"
+				},
+				"vue3snippets.trailingComma": {
+					"type": "string",
+					"enum": [
+						"none",
+						"es5",
+						"all"
+					],
+					"default": "es5",
+					"markdownDescription": "Controls the printing of trailing commas wherever possible. Valid options:\n- `none` - No trailing commas\n- `es5` - Trailing commas where valid in ES5 (objects, arrays, etc)\n- `all` - Trailing commas wherever possible (function arguments).",
+					"scope": "resource"
+				},
+				"vue3snippets.bracketSpacing": {
+					"type": "boolean",
+					"default": true,
+					"markdownDescription": "Controls the printing of spaces inside object literals.",
+					"scope": "resource"
+				},
+				"vue3snippets.jsxBracketSameLine": {
+					"type": "boolean",
+					"default": false,
+					"markdownDescription": "If true, puts the `>` of a multi-line jsx element at the end of the last line instead of being alone on the next line.",
+					"scope": "resource"
+				},
+				"vue3snippets.semi": {
+					"type": "boolean",
+					"default": true,
+					"markdownDescription": "Whether to add a semicolon at the end of every line.",
+					"scope": "resource"
+				},
+				"vue3snippets.requirePragma": {
+					"type": "boolean",
+					"default": false,
+					"markdownDescription": "Vue 3 Snippets can restrict itself to only format files that contain a special comment, called a pragma, at the top of the file. This is very useful when gradually transitioning large, unformatted codebases to it.",
+					"scope": "resource"
+				},
+				"vue3snippets.insertPragma": {
+					"type": "boolean",
+					"default": false,
+					"markdownDescription": "Vue 3 Snippets can insert a special @format marker at the top of files specifying that the file has been formatted with it. This works well when used in tandem with the `--require-pragma` option. If there is already a docblock at the top of the file then this option will add a newline to it with the @format marker.",
+					"scope": "resource"
+				},
+				"vue3snippets.useTabs": {
+					"type": "boolean",
+					"default": false,
+					"markdownDescription": "Indent lines with tabs.",
+					"scope": "resource"
+				},
+				"vue3snippets.proseWrap": {
+					"type": "string",
+					"enum": [
+						"preserve",
+						"always",
+						"never"
+					],
+					"default": "preserve",
+					"markdownDescription": "(Markdown) wrap prose over multiple lines.",
+					"scope": "resource"
+				},
+				"vue3snippets.arrowParens": {
+					"type": "string",
+					"enum": [
+						"avoid",
+						"always"
+					],
+					"default": "always",
+					"markdownDescription": "Include parentheses around a sole arrow function parameter.",
+					"scope": "resource"
+				},
+				"vue3snippets.jsxSingleQuote": {
+					"type": "boolean",
+					"default": false,
+					"markdownDescription": "Use single quotes instead of double quotes in JSX.",
+					"scope": "resource"
+				},
+				"vue3snippets.htmlWhitespaceSensitivity": {
+					"type": "string",
+					"enum": [
+						"css",
+						"strict",
+						"ignore"
+					],
+					"default": "css",
+					"markdownDescription": "Specify the global whitespace sensitivity for HTML files.\n Valid options:\n- `css` - Respect the default value of CSS display property.\n- `strict` - Whitespaces are considered sensitive.\n- `ignores` - Whitespaces are considered insensitive.",
+					"scope": "resource"
+				},
+				"vue3snippets.vueIndentScriptAndStyle": {
+					"type": "boolean",
+					"default": false,
+					"markdownDescription": "Whether or not to indent the code inside `<script>` and `<style>` tags in Vue files. Some people (like the creator of Vue) don’t indent to save an indentation level, but this might break code folding in your editor.",
+					"scope": "resource"
+				},
+				"vue3snippets.endOfLine": {
+					"type": "string",
+					"enum": [
+						"auto",
+						"lf",
+						"crlf",
+						"cr"
+					],
+					"default": "lf",
+					"markdownDescription": "Specify the end of line used by Vue 3 Snippets.",
+					"scope": "resource"
+				},
+				"vue3snippets.quoteProps": {
+					"type": "string",
+					"enum": [
+						"as-needed",
+						"consistent",
+						"preserve"
+					],
+					"default": "as-needed",
+					"markdownDescription": "Change when properties in objects are quoted.",
+					"scope": "resource"
 				}
 			}
 		},
@@ -92,15 +225,6 @@
 				"path": "./syntaxes/vue.tmLanguage"
 			}
 		],
-		"menus": {
-			"editor/context": [
-				{
-					"when": "editorLangId == vue",
-					"command": "vue3snippets.format",
-					"group": "navigation"
-				}
-			]
-		},
 		"keybindings": [
 			{
 				"key": "ctrl+shift+f",

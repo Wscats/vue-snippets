@@ -32,7 +32,7 @@ function activate(context) {
     context.subscriptions.push(compileOn);
     context.subscriptions.push(compileOff);
     context.subscriptions.push(format);
-    vscode.workspace.onWillSaveTextDocument(() => {
+    vscode.workspace.onWillSaveTextDocument((document) => {
         let config = vscode.workspace.getConfiguration("vue3snippets");
         let isEnableOnDidSaveTextDocument = config.get("enable-compile-vue-file-on-did-save-code");
         if (!isEnableOnDidSaveTextDocument) { return };
@@ -41,8 +41,14 @@ function activate(context) {
             vscode.commands.executeCommand("vue3snippets.format");
         }
     });
+    vscode.languages.registerDocumentFormattingEditProvider('vue', {
+        provideDocumentFormattingEdits(document) {
+            vscode.commands.executeCommand("vue3snippets.format");
+        }
+    });
     statusBarUi.StatusBarUi.init(vscode.workspace.getConfiguration("vue3snippets").get("enable-compile-vue-file-on-did-save-code"));
 }
+
 exports.activate = activate;
 function deactivate() { };
 exports.deactivate = deactivate;
