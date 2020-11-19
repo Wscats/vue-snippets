@@ -9,7 +9,7 @@
 		"url": "https://github.com/Wscats"
 	},
 	"publisher": "Wscats",
-	"version": "1.0.12",
+	"version": "1.0.13",
 	"license": "MIT",
 	"engines": {
 		"vscode": "^1.40.0"
@@ -74,7 +74,7 @@
 				},
 				"vue3snippets.printWidth": {
 					"type": "integer",
-					"default": 80,
+					"default": 320,
 					"markdownDescription": "Fit code within this line limit.",
 					"scope": "resource"
 				},
