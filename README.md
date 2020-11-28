@@ -10,16 +10,18 @@ Vue3 Snippets, Contains code highlighting, code snippets and formatting commonly
 <!-- <a href="https://github.com/Wscats"><img src="https://api.netlify.com/api/v1/badges/b652768b-1673-42cd-98dd-3fd807b2ebca/deploy-status" alt="Status" /></a> -->
 
 <!-- <img src="./public/1.gif" /> -->
+<!-- ![Demo](public/1.gif) -->
+![1](https://user-images.githubusercontent.com/17243165/100514730-07384500-31b2-11eb-8abf-9d58a20dd0a7.gif)
 
-![Demo](public/1.gif)
 
 You can turn on the statusbar `Auto Format Vue` switch at the bottom of vscode, which allows you to automatically format the vue file when you write it.
 
 Or right-click to display the drop-down menu panel, click the `Format Document` menu item to format.
 
 <!-- <img src="./public/2.gif" /> -->
+<!-- ![Demo](public/2.gif) -->
+![2](https://user-images.githubusercontent.com/17243165/100514732-0bfcf900-31b2-11eb-8085-579b134b1089.gif)
 
-![Demo](public/2.gif)
 
 # Snippets
 
