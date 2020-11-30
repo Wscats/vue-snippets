@@ -11,6 +11,7 @@ All notable changes to the `Vue` extension will be documented in this file.
 - 2019.08.21 Add vue snippets
 - 2020.08.22 Add syntax highlight
 - 2020.08.23 Support formatting
+- 2020.11.29 Support generator
 
 # Unreleased
 

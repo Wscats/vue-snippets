@@ -1,7 +1,7 @@
 {
 	"name": "vue",
-	"displayName": "Vue 3 Snippets Highlight Formatters",
-	"description": "Vue 2 && 3 Code Snippets, Syntax Highlight And Code Formatters Into Visual Studio Code.",
+	"displayName": "Vue 3 Snippets Highlight Formatters And Generator",
+	"description": "Vue 2 && 3 Code Snippets, Syntax Highlight, Template Generator And Code Formatters Into Visual Studio Code.",
 	"icon": "public/logo.png",
 	"author": {
 		"name": "Eno Yao",
@@ -9,7 +9,7 @@
 		"url": "https://github.com/Wscats"
 	},
 	"publisher": "Wscats",
-	"version": "1.0.15",
+	"version": "1.0.17",
 	"license": "MIT",
 	"engines": {
 		"vscode": "^1.40.0"
@@ -22,7 +22,10 @@
 		"*",
 		"onCommand:vue3snippets.compileOn",
 		"onCommand:vue3snippets.compileOff",
-		"onCommand:vue3snippets.format"
+		"onCommand:vue3snippets.format",
+		"onCommand:vue3snippets.generator-component",
+		"onCommand:vue3snippets.generator-service",
+		"onCommand:vue3snippets.generator-module"
 	],
 	"main": "./extension.js",
 	"keywords": [
@@ -39,8 +42,9 @@
 		"javascript",
 		"snippet",
 		"api",
-		"cnode",
-		"format"
+		"format",
+		"generator",
+		"syntax"
 	],
 	"homepage": "https://github.com/wscats/vue-snippets#readme",
 	"repository": {
@@ -62,8 +66,27 @@
 				"when": "editorLangId == vue",
 				"command": "vue3snippets.format",
 				"title": "Vue Format"
+			},
+			{
+				"command": "vue3snippets.generator-component",
+				"title": "Vue Generator Component"
+			},
+			{
+				"command": "vue3snippets.generator-service",
+				"title": "Vue Generator Service"
+			},
+			{
+				"command": "vue3snippets.generator-module",
+				"title": "Vue Generator Module"
 			}
 		],
+		"menus": {
+			"explorer/context": [
+				{
+					"command": "vue3snippets.generator-component"
+				}
+			]
+		},
 		"configuration": {
 			"title": "Auto Format Vue",
 			"properties": {

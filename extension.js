@@ -1,6 +1,7 @@
 const vscode = require("vscode");
 const statusBarUi = require("./status");
 const prettier = require("prettier");
+const { generateComponent, generateService, generateModule } = require("./generate");
 
 function activate(context) {
     let compileOff = vscode.commands.registerCommand("vue3snippets.compileOff", () => {
@@ -53,6 +54,9 @@ function activate(context) {
     context.subscriptions.push(compileOn);
     context.subscriptions.push(compileOff);
     context.subscriptions.push(format);
+    context.subscriptions.push(vscode.commands.registerCommand("vue3snippets.generator-component", generateComponent));
+    context.subscriptions.push(vscode.commands.registerCommand("vue3snippets.generator-service", generateService));
+    context.subscriptions.push(vscode.commands.registerCommand("vue3snippets.generator-module", generateModule));
     vscode.workspace.onWillSaveTextDocument((document) => {
         let config = vscode.workspace.getConfiguration("vue3snippets");
         let isEnableOnDidSaveTextDocument = config.get("enable-compile-vue-file-on-did-save-code");
