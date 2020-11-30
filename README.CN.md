@@ -4,37 +4,30 @@
 <a href="https://github.com/Wscats"><img src="https://img.shields.io/badge/Author-Eno Yao-blueviolet" alt="Eno Yao" /></a>
 
 [English](https://github.com/Wscats/vue-snippets/blob/master/README.md) | [中文](https://gitee.com/wscats/vue-snippets/blob/master/README.CN.md)
-# Vue3 Snippets Highlight Formatters Generators For Visual Studio Code
+
+# Vue 3 代码片段 语法高亮 格式化插件
 
 Vue3 Snippets, Contains code highlighting, code snippets and formatting commonly used in vue2 and vue3.
 
-<!-- <a href="https://github.com/Wscats"><img src="https://api.netlify.com/api/v1/badges/b652768b-1673-42cd-98dd-3fd807b2ebca/deploy-status" alt="Status" /></a> -->
-
-<!-- <img src="./public/1.gif" /> -->
-<!-- ![Demo](public/1.gif) -->
-
 ![1](https://user-images.githubusercontent.com/17243165/100514730-07384500-31b2-11eb-8abf-9d58a20dd0a7.gif)
 
-You can turn on the statusbar `Auto Format Vue` switch at the bottom of vscode, which allows you to automatically format the vue file when you write it.
+你可以在 VS Code 编辑器底部栏右下角打开 `Auto Format Vue` 开关，它可能帮你在代码保存的时候自动格式化 `vue` 文件的格式，默认是关闭状态。
 
-Or right-click to display the drop-down menu panel, click the `Format Document` menu item to format.
-
-<!-- <img src="./public/2.gif" /> -->
-<!-- ![Demo](public/2.gif) -->
+如果你不想自动格式化 `vue` 文件，你也可以在 `vue` 文件中点击鼠标右键，在出现的菜单栏中选择 `Format Document` 菜单项，则文件会执行一次格式化。
 
 ![2](https://user-images.githubusercontent.com/17243165/100514732-0bfcf900-31b2-11eb-8085-579b134b1089.gif)
 
-You can use `Vue Generator Component` commands in the folder to create new template components.
+你可以在文件夹右键的菜单栏中使用 `Vue Generator Component` ，弹窗中填入组件名，会自动生成一个默认组件模板，便于你快速创建一个组件。
 
 <img width="298" alt="3" src="https://user-images.githubusercontent.com/17243165/100542419-ab8abc00-3284-11eb-90a9-c5b6a83d9129.png">
 
-# Snippets
+# 代码片段
 
-## Vue 3 Snippets
+## Vue 3 代码片段
 
-Including most of the API of Vue3. You can type `reactive`, choose `reactive`, and press ENTER, then `const data = reactive({...})` appear on the screen.
+包含常用 Vue3 代码片段，比如你输入 `reactive`，选择 `reactive` 的代码片段，则编辑器会自动帮你生成 `const data = reactive({...})` 代码，提高你的开发效率。
 
-| Prefix            | JavaScript Snippet Content                              |
+| 关键字            | JavaScript 代码片段                                     |
 | ----------------- | ------------------------------------------------------- |
 | `import`          | `import {...} from "@vue/composition-api"`              |
 | `import`          | `import {...} from 'vue'`                               |
@@ -59,11 +52,11 @@ Including most of the API of Vue3. You can type `reactive`, choose `reactive`, a
 | `onUnmounted`     | `onUnmounted(...)`                                      |
 | `onErrorCaptured` | `onErrorCaptured(...)`                                  |
 
-## Vue 2 Snippets
+## Vue 2 代码片段
 
-All code snippets of Vue 2 Snippets are also included here.
+兼容所有常用 Vue 2 代码片段，如下：
 
-| Prefix                           | JavaScript Snippet Content                                         |
+| 关键字                           | JavaScript 代码片段                                                |
 | -------------------------------- | ------------------------------------------------------------------ |
 | `import`                         | `import ... from ...`                                              |
 | `newVue`                         | `new Vue({...})`                                                   |
@@ -121,7 +114,7 @@ All code snippets of Vue 2 Snippets are also included here.
 
 <br />
 
-| Prefix                 | HTML Snippet Content                    |
+| 关键字                 | HTML 代码片段                           |
 | ---------------------- | --------------------------------------- |
 | `template`             | `<template></template>`                 |
 | `script`               | `<script></script>`                     |
@@ -173,7 +166,7 @@ All code snippets of Vue 2 Snippets are also included here.
 
 <br />
 
-| Prefix                       | Vue Router Snippet Content                     |
+| 关键字                       | Vue Router 代码片段                            |
 | ---------------------------- | ---------------------------------------------- |
 | `routerLink`                 | `<router-link></router-link>`                  |
 | `routerView`                 | `<router-view></router-view>`                  |
@@ -201,7 +194,7 @@ All code snippets of Vue 2 Snippets are also included here.
 
 <br />
 
-| Prefix             | Vuex Snippet Content                  |
+| 关键字             | Vuex 代码片段                         |
 | ------------------ | ------------------------------------- |
 | `newVuexStore`     | `const store = new Vuex.Store({})`    |
 | `mapGetters`       | `import { mapGetters } from 'vuex'`   |
@@ -220,18 +213,18 @@ All code snippets of Vue 2 Snippets are also included here.
 
 <br />
 
-| Prefix      | Nuxt.js Snippet Content |
-| ----------- | ----------------------- |
-| `nuxt`      | `<nuxt/>`               |
-| `nuxtChild` | `<nuxt-child/>`         |
-| `nuxtLink`  | `<nuxt-link to=""/>`    |
-| `asyncData` | `asyncData() {}`        |
+| 关键字      | Nuxt.js 代码片段     |
+| ----------- | -------------------- |
+| `nuxt`      | `<nuxt/>`            |
+| `nuxtChild` | `<nuxt-child/>`      |
+| `nuxtLink`  | `<nuxt-link to=""/>` |
+| `asyncData` | `asyncData() {}`     |
 
 <!-- </details> -->
 
 # Extension Settings
 
-Use [Prettier](https://github.com/prettier/prettier)'s config.
+你可以在插件的选项中自定义代码格式化的格式，兼容 [Prettier](https://github.com/prettier/prettier) 所有的配置参数，便于定制你的 `vue` 代码格式.
 
 ```json
 vue3snippets.arrowParens
@@ -273,17 +266,17 @@ vue3snippets.vueIndentScriptAndStyle
 | vue3snippets.endOfLine                 | auto/lf/crlf/cr               | lf        |
 | vue3snippets.quoteProps                | as-needed/consistent/preserve | as-needed |
 
-# Thanks
+# 感谢
 
 <details><summary><b>Tencent Alloyteam Team && Qian Feng Team</b></summary>
 | [<img src="https://avatars1.githubusercontent.com/u/17243165?s=460&v=4" width="60px;"/><br /><sub>Eno Yao</sub>](https://github.com/Wscats) | [<img src="https://avatars2.githubusercontent.com/u/5805270?s=460&v=4" width="60px;"/><br /><sub>Aaron Xie</sub>](https://github.com/aaron-xie) | [<img src="https://avatars3.githubusercontent.com/u/12515367?s=460&v=4" width="60px;"/><br /><sub>DK Lan</sub>](https://github.com/dk-lan) | [<img src="https://avatars1.githubusercontent.com/u/30917929?s=460&v=4" width="60px;"/><br /><sub>Yong</sub>](https://github.com/flowerField) | [<img src="https://avatars3.githubusercontent.com/u/33544236?s=460&v=4" width="60px;"/><br /><sub>Li Ting</sub>](https://github.com/Liting1) | <img src="https://avatars2.githubusercontent.com/u/50255537?s=400&u=cfd51a5f46862d14e92e032a5b7ec073b67a904b&v=4" width="60px;"/><br /><sub>Xin</sub> | [<img src="https://avatars0.githubusercontent.com/u/39754159?s=400&v=4" width="60px;"/><br /><sub>Lemon</sub>](https://github.com/lemonyyye) | [<img src="https://avatars3.githubusercontent.com/u/31915459?s=400&u=11ea9bc9baa62784208a29dddcd0a77789e9620f&v=4" width="60px;"/><br /><sub>Jing</sub>](https://github.com/vickySC) | [<img src="https://avatars2.githubusercontent.com/u/24653988?s=400&u=76227871dea8d4b57162093fde63b7d52910145d&v=4" width="60px;"/><br /><sub>Lin</sub>](https://github.com/shirley3790) | [<img src="https://avatars2.githubusercontent.com/u/23230108?s=460&v=4" width="60px;"/><br /><sub>Tian Fly</sub>](https://github.com/tiantengfly) |
 | - | - | - | - | - | - | - | - | - | - |
 
-If you enjoy front end, you should have it! xie, yao, yong, ting, jing, lin, tian, xin, xia, dk and lemon ~ Waiting for you in our heart！
+希望你能喜欢这个插件！
 
 </details>
 
-<details><b><summary>Requirements</b></summary>
+<details><b><summary>引入的模块</b></summary>
 
 - [Prettier](https://github.com/prettier/prettier)
 - [Vue2 Snippets](https://github.com/sdras/vue-vscode-snippets)
@@ -291,8 +284,8 @@ If you enjoy front end, you should have it! xie, yao, yong, ting, jing, lin, tia
 
 </details>
 
-If you think it's useful, you can leave us a [message and like it](https://marketplace.visualstudio.com/items?itemName=Wscats.vue&ssr=false#review-details), Your support is our driving force😀
+如果插件能帮助到您，恳请您在 [商店](https://marketplace.visualstudio.com/items?itemName=Wscats.vue&ssr=false#review-details) 中给我们一个五星的好评，您的鼓励是我们前进的最大动力，谢谢😀
 
-# License
+# 协议
 
-[Vue3 Snippets](https://marketplace.visualstudio.com/items?itemName=Wscats.vue) is released under the [MIT](http://opensource.org/licenses/MIT).
+[Vue3 Snippets](https://marketplace.visualstudio.com/items?itemName=Wscats.vue) 基于 [MIT](http://opensource.org/licenses/MIT) 协议.
