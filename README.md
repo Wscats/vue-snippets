@@ -231,7 +231,7 @@ All code snippets of Vue 2 Snippets are also included here.
 
 # Extension Settings
 
-Use [Prettier](https://github.com/prettier/prettier)'s config.
+The configuration parameters are as follows:
 
 ```json
 vue3snippets.arrowParens

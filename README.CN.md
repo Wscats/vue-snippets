@@ -224,7 +224,7 @@
 
 # Extension Settings
 
-你可以在插件的选项中自定义代码格式化的格式，兼容 [Prettier](https://github.com/prettier/prettier) 所有的配置参数，便于定制你的 `vue` 代码格式.
+你可以在插件的选项中自定义代码格式化的格式，便于定制你的 `vue` 代码格式，配置参数如下：
 
 ```json
 vue3snippets.arrowParens
