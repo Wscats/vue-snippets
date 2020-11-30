@@ -226,7 +226,7 @@
 
 <!-- </details> -->
 
-# Extension Settings
+# 插件设置
 
 你可以在插件的选项中自定义代码格式化的格式，兼容 [Prettier](https://github.com/prettier/prettier) 所有的配置参数，便于定制你的 `vue` 代码格式.
 
@@ -250,7 +250,7 @@ vue3snippets.useTabs
 vue3snippets.vueIndentScriptAndStyle
 ```
 
-| Key                                    | Example                       | Default   |
+| 键值                                    | 例子                          | 默认值     |
 | -------------------------------------- | ----------------------------- | --------- |
 | vue3snippets.printWidth                | 10/20/30/40/n                 | 80        |
 | vue3snippets.tabWidth                  | 1/2/3/4/n                     | 2         |
