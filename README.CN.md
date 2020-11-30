@@ -5,9 +5,9 @@
 
 [English](https://github.com/Wscats/vue-snippets/blob/master/README.md) | [中文](https://gitee.com/wscats/vue-snippets/blob/master/README.CN.md)
 
-# Vue 3 代码片段 语法高亮 格式化插件
+# Vue 2/3 代码片段 语法高亮 格式化插件
 
-Vue3 Snippets, Contains code highlighting, code snippets and formatting commonly used in vue2 and vue3.
+这是一款在 Vue 2 或者 Vue 3 开发中提供代码片段，语法高亮和格式化的 VS Code 插件，能极大提高你的开发效率。
 
 ![1](https://user-images.githubusercontent.com/17243165/100514730-07384500-31b2-11eb-8abf-9d58a20dd0a7.gif)
 
