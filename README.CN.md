@@ -9,17 +9,21 @@
 
 这是一款在 Vue 2 或者 Vue 3 开发中提供代码片段，语法高亮和格式化的 VS Code 插件，能极大提高你的开发效率。
 
-![1](https://user-images.githubusercontent.com/17243165/100514730-07384500-31b2-11eb-8abf-9d58a20dd0a7.gif)
+<!-- ![1](https://user-images.githubusercontent.com/17243165/100514730-07384500-31b2-11eb-8abf-9d58a20dd0a7.gif) -->
+![3](public/1.gif)
 
 你可以在 VS Code 编辑器底部栏右下角打开 `Auto Format Vue` 开关，它可能帮你在代码保存的时候自动格式化 `vue` 文件的格式，默认是关闭状态。
 
 如果你不想自动格式化 `vue` 文件，你也可以在 `vue` 文件中点击鼠标右键，在出现的菜单栏中选择 `Format Document` 菜单项，则文件会执行一次格式化。
 
-![2](https://user-images.githubusercontent.com/17243165/100514732-0bfcf900-31b2-11eb-8085-579b134b1089.gif)
+<!-- ![2](https://user-images.githubusercontent.com/17243165/100514732-0bfcf900-31b2-11eb-8085-579b134b1089.gif) -->
+![3](public/2.gif)
 
 你可以在文件夹右键的菜单栏中使用 `Vue Generator Component` ，弹窗中填入组件名，会自动生成一个默认组件模板，便于你快速创建一个组件。
 
-<img width="298" alt="3" src="https://user-images.githubusercontent.com/17243165/100542419-ab8abc00-3284-11eb-90a9-c5b6a83d9129.png">
+<!-- <img width="298" alt="3" src="https://user-images.githubusercontent.com/17243165/100542419-ab8abc00-3284-11eb-90a9-c5b6a83d9129.png"> -->
+
+![3](public/3.png)
 
 # 代码片段
 
@@ -222,7 +226,7 @@
 
 <!-- </details> -->
 
-# Extension Settings
+# 插件设置
 
 你可以在插件的选项中自定义代码格式化的格式，便于定制你的 `vue` 代码格式，配置参数如下：
 
@@ -246,7 +250,7 @@ vue3snippets.useTabs
 vue3snippets.vueIndentScriptAndStyle
 ```
 
-| Key                                    | Example                       | Default   |
+| 键值                                    | 例子                          | 默认值     |
 | -------------------------------------- | ----------------------------- | --------- |
 | vue3snippets.printWidth                | 10/20/30/40/n                 | 80        |
 | vue3snippets.tabWidth                  | 1/2/3/4/n                     | 2         |
