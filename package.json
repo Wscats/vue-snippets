@@ -9,7 +9,7 @@
 		"url": "https://github.com/Wscats"
 	},
 	"publisher": "Wscats",
-	"version": "1.0.19",
+	"version": "1.0.21",
 	"license": "MIT",
 	"engines": {
 		"vscode": "^1.40.0"
