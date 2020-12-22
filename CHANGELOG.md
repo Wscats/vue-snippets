@@ -13,6 +13,7 @@ All notable changes to the `Vue` extension will be documented in this file.
 - 2020.08.23 Support formatting
 - 2020.11.29 Support generator
 - 2020.11.30 Improve Chinese documentation
+- 2020.12.22 Attached vue Chinese tutorials
 
 # Unreleased
 
