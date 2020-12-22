@@ -273,6 +273,14 @@ vue3snippets.vueIndentScriptAndStyle
 | vue3snippets.endOfLine                 | auto/lf/crlf/cr               | lf        |
 | vue3snippets.quoteProps                | as-needed/consistent/preserve | as-needed |
 
+
+# Tutorial
+
+Attached some Vue Chinese tutorials, hope to help you quickly get started:
+
+- [《Vue 3.0 教程》](https://github.com/Wscats/vue-cli)
+- [《Vue 2.0 教程》](https://github.com/Wscats/vue-tutorial)
+
 # Thanks
 
 <details><summary><b>Tencent Alloyteam Team && Qian Feng Team</b></summary>
