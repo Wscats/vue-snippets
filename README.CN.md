@@ -270,9 +270,9 @@ vue3snippets.vueIndentScriptAndStyle
 | vue3snippets.endOfLine                 | auto/lf/crlf/cr               | lf        |
 | vue3snippets.quoteProps                | as-needed/consistent/preserve | as-needed |
 
-# Vue 教程
+# Vue 2/3 详细教程
 
-附上一些 Vue 中文教程，希望能帮助你快速上手：
+附赠一些 Vue 中文教程，希望能帮助你快速上手：
 
 - [《Vue 3.0 教程》](https://github.com/Wscats/vue-cli)
 - [《Vue 2.0 教程》](https://github.com/Wscats/vue-tutorial)
