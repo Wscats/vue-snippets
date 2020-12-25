@@ -14,6 +14,7 @@ All notable changes to the `Vue` extension will be documented in this file.
 - 2020.11.29 Support generator
 - 2020.11.30 Improve Chinese documentation
 - 2020.12.22 Attached vue Chinese tutorials
+- 2020.12.25 Optimize the startup method and reset the settings of activationEvents
 
 # Unreleased
 
