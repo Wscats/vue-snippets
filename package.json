@@ -9,7 +9,7 @@
 		"url": "https://github.com/Wscats"
 	},
 	"publisher": "Wscats",
-	"version": "1.0.23",
+	"version": "1.0.24",
 	"license": "MIT",
 	"engines": {
 		"vscode": "^1.40.0"
@@ -19,8 +19,8 @@
 		"theme": "dark"
 	},
 	"activationEvents": [
-		"*",
 		"onLanguage:vue",
+		"onLanguage:vue-html",
 		"onCommand:vue3snippets.compileOn",
 		"onCommand:vue3snippets.compileOff",
 		"onCommand:vue3snippets.format",
