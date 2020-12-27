@@ -1,11 +1,18 @@
 const vscode = require("vscode");
 class StatusBarUi {
+    static _statusBarItem;
     static get statusBarItem() {
         if (!StatusBarUi._statusBarItem) {
             StatusBarUi._statusBarItem = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right, 200);
             this.statusBarItem.show();
         }
         return StatusBarUi._statusBarItem;
+    }
+    static show() {
+        this.statusBarItem.show();
+    }
+    static hide() {
+        this.statusBarItem.hide();
     }
     static init(enableCompileFilesOnDidSaveCode) {
         StatusBarUi.working("Starting...");

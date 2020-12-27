@@ -1,7 +1,7 @@
 {
 	"name": "vue",
-	"displayName": "Vue 3 Snippets Highlight Formatters And Generator",
-	"description": "Vue 2 && 3 Code Snippets, Syntax Highlight, Template Generator And Code Formatters Into Visual Studio Code.",
+	"displayName": "Vue 3 Support - All In One",
+	"description": "Vue 2/3 Code Syntax Highlight, Snippets, Template Generator And Code Formatters Into Visual Studio Code.",
 	"icon": "public/logo.png",
 	"author": {
 		"name": "Eno Yao",
@@ -9,7 +9,7 @@
 		"url": "https://github.com/Wscats"
 	},
 	"publisher": "Wscats",
-	"version": "1.0.24",
+	"version": "1.0.26",
 	"license": "MIT",
 	"engines": {
 		"vscode": "^1.40.0"

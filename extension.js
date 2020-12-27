@@ -3,6 +3,13 @@ const statusBarUi = require("./status");
 const prettier = require("prettier");
 const { generateComponent, generateService, generateModule } = require("./generate");
 
+function fileType(filename) {
+    const index1 = filename.lastIndexOf(".");
+    const index2 = filename.length;
+    const type = filename.substring(index1, index2);
+    return type;
+};
+
 function activate(context) {
     let compileOff = vscode.commands.registerCommand("vue3snippets.compileOff", () => {
         let config = vscode.workspace.getConfiguration("vue3snippets");
@@ -51,8 +58,34 @@ function activate(context) {
             editBuilder.replace(range, prettierText);
         });
     });
+    let compileStatus = vscode.window.onDidChangeActiveTextEditor((document) => {
+        if (!document?.document.fileName) {
+            statusBarUi.StatusBarUi.hide();
+            return;
+        }
+        // 编辑器是否命中正确的编译文件，如果编译文件后缀正确才显示右下角状态栏
+        if (['.vue'].includes(fileType(document?.document.fileName))) {
+            statusBarUi.StatusBarUi.show();
+        } else {
+            statusBarUi.StatusBarUi.hide();
+        }
+    })
+
+    let compileConfigure = vscode.workspace.onDidChangeConfiguration(() => {
+        // 修改配置，更新右下角底部状态栏
+        let config = vscode.workspace.getConfiguration("vue3snippets");
+        let isDisable = config.get("enable-compile-vue-file-on-did-save-code");
+        if (isDisable) {
+            statusBarUi.StatusBarUi.watching();
+        } else {
+            statusBarUi.StatusBarUi.notWatching();
+        }
+    })
+
     context.subscriptions.push(compileOn);
     context.subscriptions.push(compileOff);
+    context.subscriptions.push(compileStatus);
+    context.subscriptions.push(compileConfigure);
     context.subscriptions.push(format);
     context.subscriptions.push(vscode.commands.registerCommand("vue3snippets.generator-component", generateComponent));
     context.subscriptions.push(vscode.commands.registerCommand("vue3snippets.generator-service", generateService));
