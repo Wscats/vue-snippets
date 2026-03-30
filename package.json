@@ -1,385 +1,388 @@
 {
-	"name": "vue",
-	"displayName": "Vue 3 Support - All In One",
-	"description": "Vue 2/3 Code Syntax Highlight, Snippets, Template Generator And Code Formatters Into Visual Studio Code.",
-	"icon": "public/logo.png",
-	"author": {
-		"name": "Eno Yao",
-		"email": "kalone.cool@gmail.com",
-		"url": "https://github.com/Wscats"
-	},
-	"publisher": "Wscats",
-	"version": "1.0.26",
-	"license": "MIT",
-	"engines": {
-		"vscode": "^1.40.0"
-	},
-	"galleryBanner": {
-		"color": "#58bc58",
-		"theme": "dark"
-	},
-	"activationEvents": [
-		"onLanguage:vue",
-		"onLanguage:vue-html",
-		"onCommand:vue3snippets.compileOn",
-		"onCommand:vue3snippets.compileOff",
-		"onCommand:vue3snippets.format",
-		"onCommand:vue3snippets.generator-component",
-		"onCommand:vue3snippets.generator-service",
-		"onCommand:vue3snippets.generator-module"
-	],
-	"main": "./extension.js",
-	"keywords": [
-		"vue",
-		"vue2",
-		"vue3",
-		"vuejs",
-		"vue.js",
-		"composition-api",
-		"composition",
-		"function-api",
-		"function",
-		"html",
-		"javascript",
-		"snippet",
-		"api",
-		"format",
-		"generator",
-		"syntax"
-	],
-	"homepage": "https://github.com/wscats/vue-snippets#readme",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/wscats/vue-snippets"
-	},
-	"bugs": {
-		"url": "https://github.com/wscats/vue-snippets/issues",
-		"email": "kalone.cool@gmail.com"
-	},
-	"categories": [
-		"Programming Languages",
-		"Snippets",
-		"Formatters"
-	],
-	"contributes": {
-		"commands": [
-			{
-				"when": "editorLangId == vue",
-				"command": "vue3snippets.format",
-				"title": "Vue Format"
-			},
-			{
-				"command": "vue3snippets.generator-component",
-				"title": "Vue Generator Component"
-			},
-			{
-				"command": "vue3snippets.generator-service",
-				"title": "Vue Generator Service"
-			},
-			{
-				"command": "vue3snippets.generator-module",
-				"title": "Vue Generator Module"
-			}
-		],
-		"menus": {
-			"explorer/context": [
-				{
-					"command": "vue3snippets.generator-component"
-				}
-			]
-		},
-		"configuration": {
-			"title": "Auto Format Vue",
-			"properties": {
-				"vue3snippets.enable-compile-vue-file-on-did-save-code": {
-					"type": "boolean",
-					"default": false,
-					"description": "Enable compile vue file on did save code."
-				},
-				"vue3snippets.printWidth": {
-					"type": "integer",
-					"default": 90,
-					"markdownDescription": "Fit code within this line limit.",
-					"scope": "resource"
-				},
-				"vue3snippets.tabWidth": {
-					"type": "integer",
-					"default": 2,
-					"markdownDescription": "Number of spaces it should use per tab.",
-					"scope": "resource"
-				},
-				"vue3snippets.singleQuote": {
-					"type": "boolean",
-					"default": false,
-					"markdownDescription": "If true, will use single instead of double quotes.",
-					"scope": "resource"
-				},
-				"vue3snippets.trailingComma": {
-					"type": "string",
-					"enum": [
-						"none",
-						"es5",
-						"all"
-					],
-					"default": "es5",
-					"markdownDescription": "Controls the printing of trailing commas wherever possible. Valid options:\n- `none` - No trailing commas\n- `es5` - Trailing commas where valid in ES5 (objects, arrays, etc)\n- `all` - Trailing commas wherever possible (function arguments).",
-					"scope": "resource"
-				},
-				"vue3snippets.bracketSpacing": {
-					"type": "boolean",
-					"default": true,
-					"markdownDescription": "Controls the printing of spaces inside object literals.",
-					"scope": "resource"
-				},
-				"vue3snippets.jsxBracketSameLine": {
-					"type": "boolean",
-					"default": false,
-					"markdownDescription": "If true, puts the `>` of a multi-line jsx element at the end of the last line instead of being alone on the next line.",
-					"scope": "resource"
-				},
-				"vue3snippets.semi": {
-					"type": "boolean",
-					"default": true,
-					"markdownDescription": "Whether to add a semicolon at the end of every line.",
-					"scope": "resource"
-				},
-				"vue3snippets.requirePragma": {
-					"type": "boolean",
-					"default": false,
-					"markdownDescription": "Vue 3 Snippets can restrict itself to only format files that contain a special comment, called a pragma, at the top of the file. This is very useful when gradually transitioning large, unformatted codebases to it.",
-					"scope": "resource"
-				},
-				"vue3snippets.insertPragma": {
-					"type": "boolean",
-					"default": false,
-					"markdownDescription": "Vue 3 Snippets can insert a special @format marker at the top of files specifying that the file has been formatted with it. This works well when used in tandem with the `--require-pragma` option. If there is already a docblock at the top of the file then this option will add a newline to it with the @format marker.",
-					"scope": "resource"
-				},
-				"vue3snippets.useTabs": {
-					"type": "boolean",
-					"default": false,
-					"markdownDescription": "Indent lines with tabs.",
-					"scope": "resource"
-				},
-				"vue3snippets.proseWrap": {
-					"type": "string",
-					"enum": [
-						"preserve",
-						"always",
-						"never"
-					],
-					"default": "preserve",
-					"markdownDescription": "(Markdown) wrap prose over multiple lines.",
-					"scope": "resource"
-				},
-				"vue3snippets.arrowParens": {
-					"type": "string",
-					"enum": [
-						"avoid",
-						"always"
-					],
-					"default": "always",
-					"markdownDescription": "Include parentheses around a sole arrow function parameter.",
-					"scope": "resource"
-				},
-				"vue3snippets.jsxSingleQuote": {
-					"type": "boolean",
-					"default": false,
-					"markdownDescription": "Use single quotes instead of double quotes in JSX.",
-					"scope": "resource"
-				},
-				"vue3snippets.htmlWhitespaceSensitivity": {
-					"type": "string",
-					"enum": [
-						"css",
-						"strict",
-						"ignore"
-					],
-					"default": "css",
-					"markdownDescription": "Specify the global whitespace sensitivity for HTML files.\n Valid options:\n- `css` - Respect the default value of CSS display property.\n- `strict` - Whitespaces are considered sensitive.\n- `ignores` - Whitespaces are considered insensitive.",
-					"scope": "resource"
-				},
-				"vue3snippets.vueIndentScriptAndStyle": {
-					"type": "boolean",
-					"default": false,
-					"markdownDescription": "Whether or not to indent the code inside `<script>` and `<style>` tags in Vue files. Some people (like the creator of Vue) don’t indent to save an indentation level, but this might break code folding in your editor.",
-					"scope": "resource"
-				},
-				"vue3snippets.endOfLine": {
-					"type": "string",
-					"enum": [
-						"auto",
-						"lf",
-						"crlf",
-						"cr"
-					],
-					"default": "lf",
-					"markdownDescription": "Specify the end of line used by Vue 3 Snippets.",
-					"scope": "resource"
-				},
-				"vue3snippets.quoteProps": {
-					"type": "string",
-					"enum": [
-						"as-needed",
-						"consistent",
-						"preserve"
-					],
-					"default": "as-needed",
-					"markdownDescription": "Change when properties in objects are quoted.",
-					"scope": "resource"
-				}
-			}
-		},
-		"languages": [
-			{
-				"id": "vue",
-				"aliases": [
-					"Vue",
-					"vue"
-				],
-				"extensions": [
-					".vue"
-				],
-				"configuration": "./languages/vue-language-configuration.json"
-			},
-			{
-				"id": "vue-html",
-				"aliases": [
-					"Vue-html"
-				],
-				"configuration": "./languages/vue-html-language-configuration.json"
-			},
-			{
-				"id": "vue-postcss",
-				"aliases": [
-					"Vue-PostCSS",
-					"Vue-POSTCSS",
-					"vue-postcss"
-				],
-				"configuration": "./languages/vue-postcss-language-configuration.json"
-			}
-		],
-		"grammars": [
-			{
-				"language": "vue",
-				"scopeName": "source.vue",
-				"path": "./syntaxes/vue-generated.json",
-				"embeddedLanguages": {
-					"text.html.basic": "html",
-					"text.html.vue-html": "vue-html",
-					"text.jade.slm": "slm",
-					"text.pug": "jade",
-					"text.haml": "haml",
-					"text.slim": "slim",
-					"text.html.liquid": "liquid",
-					"source.css": "css",
-					"source.css.scss": "scss",
-					"source.css.less": "less",
-					"source.css.postcss": "vue-postcss",
-					"source.sass": "sass",
-					"source.stylus": "stylus",
-					"source.js": "javascript",
-					"source.ts": "typescript",
-					"source.coffee": "coffeescript",
-					"text.html.markdown": "md",
-					"source.yaml": "yaml",
-					"source.json": "json",
-					"source.php": "php",
-					"source.graphql": "graphql"
-				}
-			},
-			{
-				"language": "vue-postcss",
-				"scopeName": "source.css.postcss",
-				"path": "./syntaxes/vue-postcss.json"
-			},
-			{
-				"language": "vue-html",
-				"scopeName": "text.html.vue-html",
-				"path": "./syntaxes/vue-html.tmLanguage.json",
-				"embeddedLanguages": {
-					"source.js": "javascript"
-				}
-			},
-			{
-				"path": "./syntaxes/pug/directives.tmLanguage.json",
-				"scopeName": "vue.pug.directives",
-				"injectTo": [
-					"source.vue"
-				]
-			},
-			{
-				"path": "./syntaxes/pug/interpolations.tmLanguage.json",
-				"scopeName": "vue.pug.interpolations",
-				"injectTo": [
-					"source.vue"
-				]
-			}
-		],
-		"breakpoints": [
-			{
-				"language": "vue"
-			}
-		],
-		"keybindings": [
-			{
-				"key": "ctrl+shift+f",
-				"mac": "cmd+shift+f",
-				"when": "editorTextFocus && !editorReadonly && editorLangId == vue",
-				"command": "vue3snippets.format"
-			}
-		],
-		"snippets": [
-			{
-				"language": "javascript",
-				"path": "./snippets/javascript.json"
-			},
-			{
-				"language": "javascript",
-				"path": "./snippets/basic/javascript.json"
-			},
-			{
-				"language": "typescript",
-				"path": "./snippets/javascript.json"
-			},
-			{
-				"language": "html",
-				"path": "./snippets/javascript.json"
-			},
-			{
-				"language": "html",
-				"path": "./snippets/vue.json"
-			},
-			{
-				"language": "vue-html",
-				"path": "./snippets/basic/html.json"
-			},
-			{
-				"language": "css",
-				"path": "./snippets/basic/css.json"
-			},
-			{
-				"language": "vue",
-				"path": "./snippets/javascript.json"
-			},
-			{
-				"language": "vue",
-				"path": "./snippets/vue.json"
-			},
-			{
-				"language": "vue",
-				"path": "./snippets/html.json"
-			},
-			{
-				"language": "jade",
-				"path": "./snippets/pug.json"
-			}
-		]
-	},
-	"scripts": {
-		"build": "vsce package"
-	},
-	"dependencies": {
-		"prettier": "^2.6.2"
-	}
+  "name": "vue",
+  "displayName": "Vue 3 Support - All In One",
+  "description": "Vue 2/3 Code Syntax Highlight, Snippets, Template Generator And Code Formatters Into Visual Studio Code.",
+  "icon": "public/logo.png",
+  "author": {
+    "name": "Eno Yao",
+    "email": "kalone.cool@gmail.com",
+    "url": "https://github.com/Wscats"
+  },
+  "publisher": "Wscats",
+  "version": "1.0.26",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.40.0"
+  },
+  "galleryBanner": {
+    "color": "#58bc58",
+    "theme": "dark"
+  },
+  "activationEvents": [
+    "onLanguage:vue",
+    "onLanguage:vue-html",
+    "onCommand:vue3snippets.compileOn",
+    "onCommand:vue3snippets.compileOff",
+    "onCommand:vue3snippets.format",
+    "onCommand:vue3snippets.generator-component",
+    "onCommand:vue3snippets.generator-service",
+    "onCommand:vue3snippets.generator-module"
+  ],
+  "main": "./extension.js",
+  "keywords": [
+    "vue",
+    "vue2",
+    "vue3",
+    "vuejs",
+    "vue.js",
+    "composition-api",
+    "composition",
+    "function-api",
+    "function",
+    "html",
+    "javascript",
+    "snippet",
+    "api",
+    "format",
+    "generator",
+    "syntax"
+  ],
+  "homepage": "https://github.com/wscats/vue-snippets#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wscats/vue-snippets"
+  },
+  "bugs": {
+    "url": "https://github.com/wscats/vue-snippets/issues",
+    "email": "kalone.cool@gmail.com"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets",
+    "Formatters"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "when": "editorLangId == vue",
+        "command": "vue3snippets.format",
+        "title": "Vue Format"
+      },
+      {
+        "command": "vue3snippets.generator-component",
+        "title": "Vue Generator Component"
+      },
+      {
+        "command": "vue3snippets.generator-service",
+        "title": "Vue Generator Service"
+      },
+      {
+        "command": "vue3snippets.generator-module",
+        "title": "Vue Generator Module"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "vue3snippets.generator-component"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Auto Format Vue",
+      "properties": {
+        "vue3snippets.enable-compile-vue-file-on-did-save-code": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable compile vue file on did save code."
+        },
+        "vue3snippets.printWidth": {
+          "type": "integer",
+          "default": 90,
+          "markdownDescription": "Fit code within this line limit.",
+          "scope": "resource"
+        },
+        "vue3snippets.tabWidth": {
+          "type": "integer",
+          "default": 2,
+          "markdownDescription": "Number of spaces it should use per tab.",
+          "scope": "resource"
+        },
+        "vue3snippets.singleQuote": {
+          "type": "boolean",
+          "default": false,
+          "markdownDescription": "If true, will use single instead of double quotes.",
+          "scope": "resource"
+        },
+        "vue3snippets.trailingComma": {
+          "type": "string",
+          "enum": [
+            "none",
+            "es5",
+            "all"
+          ],
+          "default": "es5",
+          "markdownDescription": "Controls the printing of trailing commas wherever possible. Valid options:\n- `none` - No trailing commas\n- `es5` - Trailing commas where valid in ES5 (objects, arrays, etc)\n- `all` - Trailing commas wherever possible (function arguments).",
+          "scope": "resource"
+        },
+        "vue3snippets.bracketSpacing": {
+          "type": "boolean",
+          "default": true,
+          "markdownDescription": "Controls the printing of spaces inside object literals.",
+          "scope": "resource"
+        },
+        "vue3snippets.jsxBracketSameLine": {
+          "type": "boolean",
+          "default": false,
+          "markdownDescription": "If true, puts the `>` of a multi-line jsx element at the end of the last line instead of being alone on the next line.",
+          "scope": "resource"
+        },
+        "vue3snippets.semi": {
+          "type": "boolean",
+          "default": true,
+          "markdownDescription": "Whether to add a semicolon at the end of every line.",
+          "scope": "resource"
+        },
+        "vue3snippets.requirePragma": {
+          "type": "boolean",
+          "default": false,
+          "markdownDescription": "Vue 3 Snippets can restrict itself to only format files that contain a special comment, called a pragma, at the top of the file. This is very useful when gradually transitioning large, unformatted codebases to it.",
+          "scope": "resource"
+        },
+        "vue3snippets.insertPragma": {
+          "type": "boolean",
+          "default": false,
+          "markdownDescription": "Vue 3 Snippets can insert a special @format marker at the top of files specifying that the file has been formatted with it. This works well when used in tandem with the `--require-pragma` option. If there is already a docblock at the top of the file then this option will add a newline to it with the @format marker.",
+          "scope": "resource"
+        },
+        "vue3snippets.useTabs": {
+          "type": "boolean",
+          "default": false,
+          "markdownDescription": "Indent lines with tabs.",
+          "scope": "resource"
+        },
+        "vue3snippets.proseWrap": {
+          "type": "string",
+          "enum": [
+            "preserve",
+            "always",
+            "never"
+          ],
+          "default": "preserve",
+          "markdownDescription": "(Markdown) wrap prose over multiple lines.",
+          "scope": "resource"
+        },
+        "vue3snippets.arrowParens": {
+          "type": "string",
+          "enum": [
+            "avoid",
+            "always"
+          ],
+          "default": "always",
+          "markdownDescription": "Include parentheses around a sole arrow function parameter.",
+          "scope": "resource"
+        },
+        "vue3snippets.jsxSingleQuote": {
+          "type": "boolean",
+          "default": false,
+          "markdownDescription": "Use single quotes instead of double quotes in JSX.",
+          "scope": "resource"
+        },
+        "vue3snippets.htmlWhitespaceSensitivity": {
+          "type": "string",
+          "enum": [
+            "css",
+            "strict",
+            "ignore"
+          ],
+          "default": "css",
+          "markdownDescription": "Specify the global whitespace sensitivity for HTML files.\n Valid options:\n- `css` - Respect the default value of CSS display property.\n- `strict` - Whitespaces are considered sensitive.\n- `ignores` - Whitespaces are considered insensitive.",
+          "scope": "resource"
+        },
+        "vue3snippets.vueIndentScriptAndStyle": {
+          "type": "boolean",
+          "default": false,
+          "markdownDescription": "Whether or not to indent the code inside `<script>` and `<style>` tags in Vue files. Some people (like the creator of Vue) don’t indent to save an indentation level, but this might break code folding in your editor.",
+          "scope": "resource"
+        },
+        "vue3snippets.endOfLine": {
+          "type": "string",
+          "enum": [
+            "auto",
+            "lf",
+            "crlf",
+            "cr"
+          ],
+          "default": "lf",
+          "markdownDescription": "Specify the end of line used by Vue 3 Snippets.",
+          "scope": "resource"
+        },
+        "vue3snippets.quoteProps": {
+          "type": "string",
+          "enum": [
+            "as-needed",
+            "consistent",
+            "preserve"
+          ],
+          "default": "as-needed",
+          "markdownDescription": "Change when properties in objects are quoted.",
+          "scope": "resource"
+        }
+      }
+    },
+    "languages": [
+      {
+        "id": "vue",
+        "aliases": [
+          "Vue",
+          "vue"
+        ],
+        "extensions": [
+          ".vue"
+        ],
+        "configuration": "./languages/vue-language-configuration.json"
+      },
+      {
+        "id": "vue-html",
+        "aliases": [
+          "Vue-html"
+        ],
+        "configuration": "./languages/vue-html-language-configuration.json"
+      },
+      {
+        "id": "vue-postcss",
+        "aliases": [
+          "Vue-PostCSS",
+          "Vue-POSTCSS",
+          "vue-postcss"
+        ],
+        "configuration": "./languages/vue-postcss-language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "vue",
+        "scopeName": "source.vue",
+        "path": "./syntaxes/vue-generated.json",
+        "embeddedLanguages": {
+          "text.html.basic": "html",
+          "text.html.vue-html": "vue-html",
+          "text.jade.slm": "slm",
+          "text.pug": "jade",
+          "text.haml": "haml",
+          "text.slim": "slim",
+          "text.html.liquid": "liquid",
+          "source.css": "css",
+          "source.css.scss": "scss",
+          "source.css.less": "less",
+          "source.css.postcss": "vue-postcss",
+          "source.sass": "sass",
+          "source.stylus": "stylus",
+          "source.js": "javascript",
+          "source.ts": "typescript",
+          "source.coffee": "coffeescript",
+          "text.html.markdown": "md",
+          "source.yaml": "yaml",
+          "source.json": "json",
+          "source.php": "php",
+          "source.graphql": "graphql"
+        }
+      },
+      {
+        "language": "vue-postcss",
+        "scopeName": "source.css.postcss",
+        "path": "./syntaxes/vue-postcss.json"
+      },
+      {
+        "language": "vue-html",
+        "scopeName": "text.html.vue-html",
+        "path": "./syntaxes/vue-html.tmLanguage.json",
+        "embeddedLanguages": {
+          "source.js": "javascript"
+        }
+      },
+      {
+        "path": "./syntaxes/pug/directives.tmLanguage.json",
+        "scopeName": "vue.pug.directives",
+        "injectTo": [
+          "source.vue"
+        ]
+      },
+      {
+        "path": "./syntaxes/pug/interpolations.tmLanguage.json",
+        "scopeName": "vue.pug.interpolations",
+        "injectTo": [
+          "source.vue"
+        ]
+      }
+    ],
+    "breakpoints": [
+      {
+        "language": "vue"
+      }
+    ],
+    "keybindings": [
+      {
+        "key": "ctrl+shift+f",
+        "mac": "cmd+shift+f",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == vue",
+        "command": "vue3snippets.format"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/javascript.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/basic/javascript.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/javascript.json"
+      },
+      {
+        "language": "html",
+        "path": "./snippets/javascript.json"
+      },
+      {
+        "language": "html",
+        "path": "./snippets/vue.json"
+      },
+      {
+        "language": "vue-html",
+        "path": "./snippets/basic/html.json"
+      },
+      {
+        "language": "css",
+        "path": "./snippets/basic/css.json"
+      },
+      {
+        "language": "vue",
+        "path": "./snippets/javascript.json"
+      },
+      {
+        "language": "vue",
+        "path": "./snippets/vue.json"
+      },
+      {
+        "language": "vue",
+        "path": "./snippets/html.json"
+      },
+      {
+        "language": "jade",
+        "path": "./snippets/pug.json"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "vsce package",
+    "lint": "eslint src --ext .ts,.tsx,.js,.jsx --fix",
+    "test": "jest --coverage",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "prettier": "^2.6.2"
+  }
 }
