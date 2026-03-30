@@ -1,3 +1,5 @@
+'use strict';
+
 const vscode = require("vscode");
 const statusBarUi = require("./status");
 const prettier = require("prettier");

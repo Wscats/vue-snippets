@@ -12,7 +12,8 @@
   "version": "1.0.26",
   "license": "MIT",
   "engines": {
-    "vscode": "^1.40.0"
+    "vscode": "^1.40.0",
+    "node": ">=18.0.0"
   },
   "galleryBanner": {
     "color": "#58bc58",
@@ -380,7 +381,10 @@
     "build": "vsce package",
     "lint": "eslint src --ext .ts,.tsx,.js,.jsx --fix",
     "test": "jest --coverage",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "lint:check": "eslint . --ext .ts,.tsx,.js,.jsx",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "dependencies": {
     "prettier": "^2.6.2"

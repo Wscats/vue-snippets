@@ -1,7 +1,7 @@
 "use strict";
 exports.__esModule = true;
-var https_1 = require("https");
-var i = 0;
+const https_1 = require("https");
+let i = 0;
 while (i < 2000) {
     i++;
     (function (i) {

@@ -1,3 +1,5 @@
+'use strict';
+
 const vscode = require("vscode");
 class StatusBarUi {
     static _statusBarItem;
