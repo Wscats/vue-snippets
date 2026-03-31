@@ -1,4 +1,5 @@
-exports.componentFile = `<template>
+/** Vue component template string. */
+export const componentFile: string = `<template>
   <div></div>
 </template>
 

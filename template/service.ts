@@ -1,4 +1,5 @@
-exports.serviceFile = `
+/** Vue service template string. */
+export const serviceFile: string = `
 import ServiceController from '@/{serviceName}/ServiceController';
 import { serviceConfig } from '@/config';
 
